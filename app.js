@@ -8,6 +8,8 @@ const userSkillRoute = require("./src/router/userSkillRoute")
 const userInterestRoute = require("./src/router/userInterestRoute")
 const userSocialLinkRoute = require("./src/router/userSocialLinkRoute")
 const connectionRoute = require("./src/router/connectionRoute")
+const projectSkill = require("./src/router/projectSkill");
+const projectInvitation = require("./src/router/projectInvitation");
 app.use(express.json())
 app.use('/api/roles', roleRoute)
 app.use('/api/users', userRoute)
@@ -16,6 +18,8 @@ app.use('/api/user-skills', userSkillRoute)
 app.use('/api/user-interests', userInterestRoute)
 app.use('/api/user-social-links', userSocialLinkRoute)
 app.use('/api/connections', connectionRoute)
+app.use('/api/project-skills', projectSkill);
+app.use("/api/project-invitations", projectInvitation);
 
 //Global error handler
 app.use(errorHandler)
