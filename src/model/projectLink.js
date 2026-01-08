@@ -25,3 +25,5 @@ const projectLinkSchema = new mongoose.Schema(
 )
 
 module.exports = mongoose.model("ProjectLink", projectLinkSchema)
+
+// good day to all
