@@ -16,6 +16,8 @@ const projectInvitation = require("./src/router/projectInvitation");
 // New routes
 const projectRoutes = require("./src/router/projectRoutes");
 const projectMemberRoutes = require("./src/router/projectMemberRoutes");
+const menuRoute = require("./src/router/menuRoute");
+const roleMenuRoute = require("./src/router/roleMenuRoute");
 
 app.use(express.json())
 
@@ -33,6 +35,8 @@ app.use("/api/project-invitations", projectInvitation);
 // New routes
 app.use("/api/projects", projectRoutes);
 app.use("/api/project-members", projectMemberRoutes);
+app.use("/api/menus", menuRoute);
+app.use("/api/role-menus", roleMenuRoute);
 
 // Global error handler
 app.use(errorHandler)
