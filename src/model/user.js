@@ -81,7 +81,7 @@ const userSchema = new mongoose.Schema({
 })
 
 // Indexes
-// Note: email index is automatically created by unique: true
+
 userSchema.index({ username: 1 })
 userSchema.index({ role_id: 1 })
 userSchema.index({ status: 1 })
